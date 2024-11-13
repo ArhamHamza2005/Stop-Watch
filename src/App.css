@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* General styling */
+.stopwatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    padding: 30px;
+    max-width: 360px;
+    margin: 150px auto;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    border-radius: 16px;
+    box-shadow: 10px 10px 20px #2e00fa, -10px -10px 20px #ffffff;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  h2 {
+    margin-bottom: 25px;
+    font-size: 1.75em;
+    color: #333;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
   }
-  to {
-    transform: rotate(360deg);
+  
+  #time {
+    display: flex;
+    gap: 10px;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #0d6efd;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
   }
-}
+  
+  #time span {
+    background-color: #f1f1f1;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: inset 5px 5px 10px #011aff45, inset -5px -5px 10px #012bff49;
+  }
+  
+  #button {
+    display: flex;
+    gap: 15px;
+  }
+  
+  #button button {
+    padding: 12px 25px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(145deg, #007bff, #0056b3);
+    color: #fff;
+    font-weight: 500;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.8);
+  }
+  
+  #button button:hover {
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2), -6px -6px 12px rgba(255, 255, 255, 0.9);
+  }
+  
+  #button button:active {
+    transform: translateY(0);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), -2px -2px 4px rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 600px) {
+    .stopwatch {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    h2 {
+      font-size: 1.5em;
+    }
+  
+    #time {
+      font-size: 2em;
+      gap: 8px;
+    }
+  
+    #button button {
+      padding: 10px 20px;
+      font-size: 0.9em;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    h2 {
+      font-size: 1.25em;
+    }
+  
+    #time {
+      font-size: 1.5em;
+      gap: 5px;
+    }
+  
+    #button {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    #button button {
+      padding: 10px;
+      font-size: 1em;
+      width: 100%;
+    }
+  }
+  
